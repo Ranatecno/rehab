@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Rehab Gemelo — Tracker</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Rehab Gemelo — Tracker</h1>
+    <button id="prevWeek" title="Semana anterior">◀</button>
+    <div id="weekRange"></div>
+    <button id="nextWeek" title="Semana siguiente">▶</button>
+  </header>
+
+  <section id="progressWrap">
+    <div class="label">Progreso semanal: <span id="progressPct">0%</span></div>
+    <div class="progress"><div id="progressBar"></div></div>
+  </section>
+
+  <main>
+    <aside>
+      <h2>Ejercicios</h2>
+      <ul id="exerciseList"></ul>
+      <details>
+        <summary>Agregar ejercicio</summary>
+        <div class="form">
+          <input id="exName" placeholder="Nombre" />
+          <input id="exDetail" placeholder="Detalle (opcional)" />
+          <button id="addExercise">Guardar</button>
+        </div>
+      </details>
+      <div class="tips">
+        <p>• Si aparece <b>dolor</b>, reduce la carga.</p>
+        <p>• Superficie plana, calzado estable.</p>
+        <p>• No estires fuerte si hay molestia aguda.</p>
+      </div>
+    </aside>
+
+    <section id="daysGrid"></section>
+  </main>
+
+  <footer>
+    <button id="resetWeek">Reset semana</button>
+    <span>Funciona offline • Datos guardados en este dispositivo</span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
